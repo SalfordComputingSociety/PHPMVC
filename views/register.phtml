@@ -1,0 +1,23 @@
+<?php require_once("header.phtml"); ?>
+
+<h1>Register</h1>
+<form method="post" action="register.php">
+    <label>Username</label>
+    <div class="input-control text full-size">
+        <input name="username" type="text">
+    </div>
+
+    <label>Password</label>
+    <div class="input-control password full-size">
+        <input name="password" type="password">
+    </div>
+
+    <label>Email</label>
+    <div class="input-control text full-size">
+        <input name="email" type="text">
+    </div>
+
+    <input type="submit" name="register">
+</form>
+
+<?php require_once("footer.phtml"); ?>

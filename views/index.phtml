@@ -1,0 +1,8 @@
+<?php require_once("header.phtml"); ?>
+<p>You are logged in as <?php echo $user->username; ?> | <a href="logout.php">logout</a> </p>
+<?php foreach ($view->listOfUsers as $user) { ?>
+    <div>
+        <?php echo "". $user->username . ": " . $user->emil; ?>
+    </div>
+<?php } ?>
+<?php require_once("footer.phtml")?>
