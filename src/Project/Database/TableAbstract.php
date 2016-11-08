@@ -17,6 +17,7 @@ require_once(__DIR__."/Database.php");
  * Provides an abstract table class for connecting to the database
  */
 abstract class TableAbstract {
+    // Name of the table and the primary key
     protected $name;
     protected $primaryKey = 'id', $dbHandler, $db;
 
@@ -24,10 +25,12 @@ abstract class TableAbstract {
      * Constructor
      */
     public function __construct() {
+        // gets the database and database handler
         $this->db = Database::getInstance();
         $this->dbHandler = $this->db->getDbHandler();
     }
 
+    // some default methods for fetching data - you should use the example in UserTable
     public function fetchAll() {
         $sql = 'SELECT * FROM ' . $this->name;
         $results = $this->dbHandler->prepare($sql);

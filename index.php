@@ -8,6 +8,8 @@
  * Time: 19:17
  */
 
+
+
 // Require the header, we do this on all pages
 require_once ("header.php");
 
